@@ -1,0 +1,246 @@
+/* =======================
+   RESET Y BASE
+======================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px; /* 🔥 escala base grande */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+  background: #212529;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.btn-logout {
+  background: #dc3545;
+  border: none;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* =======================
+   BUSCADOR
+======================= */
+.buscador {
+  width: 100%;
+  padding: 16px;
+  font-size: 2.3rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin: 12px 0;
+}
+
+/* =======================
+   CONTENEDOR PRINCIPAL
+======================= */
+main {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* =======================
+   SECCIÓN PRODUCTOS
+======================= */
+.productos {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.productos h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 14px;
+}
+
+/* Scroll de productos */
+.productos-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-height: 72vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* =======================
+   TARJETA PRODUCTO
+======================= */
+.producto-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 170px;
+}
+
+.producto-card h3 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.producto-card p {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+/* BOTÓN AGREGAR */
+.producto-card button {
+  margin-top: auto;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  border-radius: 14px;
+}
+
+/* =======================
+   SECCIÓN ORDEN
+======================= */
+.orden {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.orden h2 {
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 14px;
+}
+
+/* Lista de orden */
+.orden-lista {
+  max-height: 45vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.orden-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 2.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.menos,
+.mas {
+  font-size: 40px;        /* tamaño del símbolo */
+  padding: 20px 30px;      /* tamaño del botón */
+  min-width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+/* =======================
+   MESA
+======================= */
+.mesa-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+
+.mesa-input label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mesa-input select {
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* =======================
+   BOTÓN ENVIAR
+======================= */
+.btn-enviar {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+/* =======================
+   NOTIFICACIÓN
+======================= */
+.notificacion {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d6efd;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+/* =======================
+   DESKTOP (MEJORA VISUAL)
+======================= */
+@media (min-width: 900px) {
+  main {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  header {
+    max-width: 900px;
+    margin: auto;
+  }
+}
