@@ -30,6 +30,7 @@ pids
 *.pid.lock
 
 # === Cobertura de pruebas ===
+/env
 lib-cov
 coverage/
 .nyc_output
