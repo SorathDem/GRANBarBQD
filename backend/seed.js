@@ -8,7 +8,7 @@ dotenv.config();
 async function seed() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("✅ Conectado a MongoDB Atlas");
+    console.log("Conectado a MongoDB Atlas");
 
     await User.deleteMany(); // Limpia usuarios viejos
 
@@ -17,9 +17,9 @@ async function seed() {
       { code: "2010", role: "mesero" }
     ]);
 
-    console.log("✅ Usuarios insertados correctamente");
+    console.log("Usuarios insertados correctamente");
   } catch (err) {
-    console.error("❌ Error:", err);
+    console.error(" Error:", err);
   } finally {
     await mongoose.disconnect();
   }
