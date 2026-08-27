@@ -18,7 +18,7 @@ def send_report():
         data = request.get_json()
         fecha = data.get("fecha")
         total = data.get("total")
-        tipo = data.get("tipo")  # "diario" o "mensual"
+        tipo = data.get("tipo")  
         detalles = data.get("detalles", [])
 
         if not fecha or not total:
@@ -73,7 +73,6 @@ def send_report():
 
         msg.attach(MIMEText(html, "html"))
 
-        # Enviar correo
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
             smtp.login(EMAIL, PASSWORD)
             smtp.send_message(msg)
