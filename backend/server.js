@@ -15,11 +15,10 @@ dotenv.config();
 
 const app = express();
 
-// === CORS CONFIGURADO ===
-// Permite tu frontend de Render y localhost para pruebas
+
 const allowedOrigins = [
-  "https://granbar-bq.onrender.com", // frontend en Render
-  "http://localhost:5500",           // desarrollo local
+  "https://granbar-bq.onrender.com", 
+  "http://localhost:5500",           
 ];
 
 app.use(
@@ -32,14 +31,14 @@ app.use(
         callback(new Error("CORS no permitido para este origen"));
       }
     },
-    credentials: true, // permite cookies si las necesitas
+    credentials: true, 
   })
 );
 
-// Middleware JSON
+
 app.use(express.json());
 
-// === Rutas de la API ===
+
 app.use("/api/auth", AuthRoutes);
 app.use("/api/productos", ProductRoutes);
 app.use("/api/ordenes", OrderRoutes);
