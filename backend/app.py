@@ -7,7 +7,7 @@ from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 CORS(app)
 
-# ⚙️ Configuración de correo
+
 EMAIL = "foryekkodem@gmail.com"
 PASSWORD = "oxfqngibxunmjqlp"
 RECEPTOR = "santiagoacostaavila2905@gmail.com"
@@ -24,13 +24,13 @@ def send_report():
         if not fecha or not total:
             return jsonify({"ok": False, "msg": "Faltan datos"}), 400
 
-        # Crear el correo
+ 
         msg = MIMEMultipart("alternative")
         msg["Subject"] = f"Reporte {tipo.capitalize()} - {fecha}"
         msg["From"] = EMAIL
         msg["To"] = RECEPTOR
 
-        # 🔹 Generar cuerpo HTML del correo
+
         html = f"""
         <html>
         <body style="font-family: Arial; color: #333;">
