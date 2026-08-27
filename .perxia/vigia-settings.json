@@ -1,3 +1,52 @@
 {
-  "enabled": true
+  "enabled": true,
+  "integrations": {
+    "checkmarx": {
+      "enabled": false,
+      "baseUrl": "",
+      "clientId": "",
+      "clientSecret": "",
+      "tenant": "",
+      "projectId": "",
+      "configured": false
+    },
+    "sonarqube": {
+      "enabled": false,
+      "url": "",
+      "token": "",
+      "projectKey": "",
+      "configured": false
+    },
+    "datadog": {
+      "enabled": false,
+      "apiKey": "",
+      "appKey": "",
+      "site": "datadoghq.com",
+      "configured": false
+    },
+    "ai": {
+      "enabled": true,
+      "provider": "perxia",
+      "agent": "code-vigia-review",
+      "maxFiles": 10,
+      "configured": true
+    },
+    "azureDevops": {
+      "enabled": true,
+      "orgUrl": "",
+      "pat": "",
+      "project": "",
+      "repoId": "",
+      "configured": false
+    },
+    "githubPrReview": {
+      "enabled": true,
+      "postComments": true,
+      "configured": true
+    }
+  },
+  "iso25010": {
+    "enabled": true,
+    "useAsPrimaryScore": false
+  }
 }
